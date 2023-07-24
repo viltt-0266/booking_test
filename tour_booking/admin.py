@@ -13,8 +13,9 @@ class TourAmin(admin.ModelAdmin):
 
 admin.site.register(Tour, TourAmin)
 
+
 class BookingAmin(admin.ModelAdmin):
-    list_display = ('user', 'tour', 'status', 'created_at', 'departure_date')
+    list_display = ( 'status', 'created_at', 'departure_date')
     list_filter = ('status', 'created_at', 'departure_date')
     actions = ['approve_booking', 'reject_booking']
 
