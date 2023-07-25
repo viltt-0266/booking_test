@@ -29,7 +29,7 @@ class Tour(models.Model):
     description = models.TextField()
     price = models.DecimalField(max_digits=10, decimal_places=2)
     date = models.DateField()
-    #average_rating = models.DecimalField(max_digits=5, decimal_places=2)
+    average_rating = models.DecimalField(max_digits=5, decimal_places=2)
 
     def __str__(self):
         return self.name
@@ -59,8 +59,8 @@ class Image(models.Model):
         return f"Image {self.id} for Tour {self.tour.name}"
 
 class Booking(models.Model):
-    #user = models.ForeignKey(User, on_delete=models.CASCADE)
-    #tour = models.ForeignKey(Tour, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    tour = models.ForeignKey(Tour, on_delete=models.CASCADE)
     status = models.CharField(max_length=255)
     created_at = models.DateTimeField(auto_now_add= True)
     price = models.DecimalField(max_digits=10, decimal_places=2)
