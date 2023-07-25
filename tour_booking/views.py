@@ -15,3 +15,4 @@ class TourListView(generic.ListView):
 
 class TourDetailView(generic.DetailView):
     model = Tour
+
