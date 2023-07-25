@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 class User(models.Model):
     id = models.IntegerField(primary_key=True)
@@ -31,6 +32,10 @@ class Tour(models.Model):
     date = models.DateField()
     average_rating = models.DecimalField(max_digits=5, decimal_places=2)
 
+    def get_absolute_url(self):
+        """Returns the url to access a particular book instance."""
+        return reverse('tour-detail', args=[str(self.id)])
+
     def __str__(self):
         return self.name
     def calculate_average_rating(self):
@@ -49,6 +54,8 @@ class Tour(models.Model):
 
         # Làm tròn kết quả đến 2 chữ số thập phân
         return round(average, 2)
+
+        
 
 class Image(models.Model):
     id = models.IntegerField(primary_key=True)

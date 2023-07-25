@@ -1,0 +1,9 @@
+{% extends 'base_generic.html' %}
+{% load i18n %}
+{% block content %}
+<h2>{{ tour.name }} - Tour Details</h2>
+<p>Description: {{ tour.description }}</p>
+<p>Price: {{ tour.price }}</p>
+<p>Date: {{ tour.date }}</p>
+<p>Rating: {{ tour.average_rating }}</p>
+{% endblock %}
