@@ -14,20 +14,26 @@
       crossorigin="anonymous" />
     <!-- Add additional CSS in static file -->
     {% load static %}
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
   </head>
   <body>
     <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-2">
+      <div class="row test">
+        <div class="nav_ul">
           {% block sidebar %}
-          <ul class="sidebar-nav">
+          <ul class="nav nav-pills">
             <li><a href="{% url 'index' %}">{% trans "Home" %}</a></li>
             <li><a href="{% url 'tours' %}">{% trans "Tour List" %}</a></li>
+            <li><a href="{% url 'index' %}">{% trans "About" %}</a></li>
+            {% if user.is_authenticated %}
+                        <li><a href="{% url 'logout' %}">{% trans "Logout" %}</a></li>
+                    {% else %}
+                        <li><a href="{% url 'login' %}">{% trans "Login" %}</a></li>
+                    {% endif %}
           </ul>
           {% endblock %}
         </div>
-        <div class="col-sm-10 ">{% block content %}{% endblock %}</div>
+        <div>{% block content %}{% endblock %}</div>
         <div class="row">{% include "pagination.html" %}</div>
       </div>
     </div>

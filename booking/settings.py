@@ -40,6 +40,10 @@ INSTALLED_APPS = [
     'corsheaders',
     'tour_booking.apps.TourBookingConfig',
     #'bootstrap5',
+    'django.contrib.sites',  # Required for allauth
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
 ]
 CORS_ORIGIN_ALLOW_ALL = True
 
@@ -155,3 +159,20 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Định nghĩa URL để truy cập vào phương tiện (MEDIA_URL)
 MEDIA_URL = '/media/'
+
+# Cài đặt email làm phương thức đăng ký mặc định
+ACCOUNT_AUTHENTICATION_METHOD = 'email'
+
+# Yêu cầu xác thực email trước khi kích hoạt tài khoản
+ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+
+# Cài đặt URL để chuyển hướng sau khi đăng nhập thành công
+LOGIN_REDIRECT_URL = 'home'
+
+# Cài đặt URL để chuyển hướng sau khi đăng xuất
+ACCOUNT_LOGOUT_REDIRECT_URL = 'home'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_USERNAME_REQUIRED = False
+ACCOUNT_AUTHENTICATION_METHOD = 'email'

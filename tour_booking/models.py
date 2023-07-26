@@ -31,22 +31,7 @@ class Tour(models.Model):
     price = models.DecimalField(max_digits=10, decimal_places=2)
     date = models.DateField()
     average_rating = models.DecimalField(max_digits=5, decimal_places=2)
-  
 
-    def get_absolute_url(self):
-        """Returns the url to access a particular book instance."""
-        return reverse('tour-detail', args=[str(self.id)])
-
-    def __str__(self):
-        return self.name
-    class Tour(models.Model):
-        id = models.IntegerField(primary_key=True)
-    name = models.CharField(max_length=255)
-    description = models.TextField()
-    price = models.DecimalField(max_digits=10, decimal_places=2)
-    date = models.DateField()
-    average_rating = models.DecimalField(max_digits=5, decimal_places=2)
-  
 
     def get_absolute_url(self):
         """Returns the url to access a particular book instance."""

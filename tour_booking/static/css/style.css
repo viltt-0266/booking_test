@@ -4,3 +4,117 @@
     list-style: none;
   }
   
+  /* static/css/styles.css */
+
+/* Tùy chỉnh kiểu chữ và màu sắc cho các thành phần trong form */
+/* static/css/login.css */
+
+/* static/css/login.css */
+
+/* Các màu pastel ví dụ */
+/* static/css/login.css */
+body, html {
+  padding: 0;
+  margin: 0;
+}
+/* static/css/styles.css */
+/* static/css/styles.css */
+/* static/css/styles.css */
+
+/* Chỉ định màu nền cho body và định dạng font */
+body {
+  background-color: #f1f3f6;
+  font-family: Arial, sans-serif;
+}
+
+/* Định dạng phần header và tiêu đề h1 */
+.login-body h1 {
+  color: #51bea3;
+  margin-top: 30px;
+}
+
+/* Định dạng form đăng nhập */
+.login-body form {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+  width: 300px;
+  margin: 0 auto;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Định dạng label và input */
+.login-body label {
+  color: #51bea3;
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+/* Định dạng nút đăng nhập */
+input[type="submit"] {
+  background-color: #51bea3;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+input[type="submit"]:hover {
+  background-color: #429d87;
+}
+
+/* Định dạng thông báo lỗi */
+.login-formp {
+  color: red;
+}
+.test{
+  color:#429d87
+}
+
+.login-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* This will make the form take the full height of the viewport */
+}
+
+.login-form {
+  width: 400px; /* Adjust the width of the form as you like */
+  padding: 20px;
+  background-color: #f1f3f6;
+}
+
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: #51bea3;
+  padding: 10px;
+  width: 100%;
+}
+
+.nav a {
+  color: #fff; /* Màu chữ trắng */
+  text-decoration: none; /* Loại bỏ gạch chân cho liên kết */
+  font-size: 16px; /* Kích thước chữ */
+  font-weight: bold; /* In đậm chữ */
+  font-family: Arial, sans-serif; /* Kiểu chữ */
+}
+
+.nav a:hover {
+  color: #429d87; /* Màu chữ khi di chuột qua */
+}
+.nav_ul {
+  padding: 0px;
+}
+

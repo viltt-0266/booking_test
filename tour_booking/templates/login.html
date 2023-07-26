@@ -1,0 +1,23 @@
+{% extends "base_generic.html" %}
+{% load static %}
+{% block content %}
+<div class="login-body">
+    <form class="login-form" method="post">
+        {% csrf_token %}
+        <fieldset>
+            <legend>Đăng nhập</legend>
+            {% if error_message %}
+                <p>{{ error_message }}</p>
+            {% endif %}
+            <label for="username">Tên đăng nhập:</label>
+            <input type="text" id="username" name="username" required><br>
+            <label for="password">Mật khẩu:</label>
+            <input type="password" id="password" name="password" required><br>
+            <input type="submit" value="Đăng nhập">
+            <p class="mt-3 text-center">
+                <a href="{% url 'index' %}" style="color: #51bea3;">Quên mật khẩu?</a>
+            </p>
+        </fieldset>
+    </form>
+</div>
+{% endblock %}
